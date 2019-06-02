@@ -992,6 +992,8 @@ MonoBehaviour:
   rightHandEffector: 6
   leftShoulderEffector: 1
   rightShoulderEffector: 2
+  HugTarget: {fileID: 0}
+  MaxHugDistance: 5
 --- !u!114 &293381442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1933,6 +1935,8 @@ MonoBehaviour:
   rightHandEffector: 6
   leftShoulderEffector: 1
   rightShoulderEffector: 2
+  HugTarget: {fileID: 0}
+  MaxHugDistance: 5
 --- !u!114 &386428589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6184,6 +6188,12 @@ Transform:
   m_Father: {fileID: 71741572}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1959007985 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2001439913604166054, guid: 133e56272cf4712499203aac0a559828,
+    type: 3}
+  m_PrefabInstance: {fileID: 3421655599768953331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1984343757
 GameObject:
   m_ObjectHideFlags: 0
@@ -7034,6 +7044,14 @@ PrefabInstance:
       propertyPath: rightHandTarget
       value: 
       objectReference: {fileID: 2080049911}
+    - target: {fileID: 755872996, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
+      propertyPath: HugTarget
+      value: 
+      objectReference: {fileID: 1959007985}
+    - target: {fileID: 755872996, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
+      propertyPath: MaxHugDistance
+      value: 0.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
 --- !u!1001 &3421655599768953331

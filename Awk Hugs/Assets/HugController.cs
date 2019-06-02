@@ -1,4 +1,5 @@
 ﻿using RootMotion.FinalIK;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,9 @@ public class HugController : MonoBehaviour
     [SerializeField] FullBodyBipedEffector rightHandEffector;
     [SerializeField] FullBodyBipedEffector leftShoulderEffector;
     [SerializeField] FullBodyBipedEffector rightShoulderEffector;
+
+    public Transform HugTarget;
+    public float MaxHugDistance = 5.0f;
 
     void Awake()
     {
@@ -45,7 +49,16 @@ public class HugController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            LeftHug();
+            if(CheckIfInRange())
+                LeftHug();
         }
+    }
+
+    private bool CheckIfInRange()
+    {
+        Debug.Log((HugTarget.position - gameObject.transform.position).magnitude);
+        if (Math.Abs((HugTarget.position - gameObject.transform.position).magnitude) <= MaxHugDistance)
+            return true;
+        else return false;
     }
 }
