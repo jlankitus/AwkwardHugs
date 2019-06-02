@@ -12,6 +12,7 @@ namespace RootMotion.Demos {
 
 		[Tooltip("The object to interact to")]
 		[SerializeField] InteractionObject interactionObject;
+
 		[Tooltip("The effectors to interact with")]
 		[SerializeField] FullBodyBipedEffector[] effectors;
 
