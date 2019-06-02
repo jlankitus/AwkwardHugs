@@ -40,6 +40,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     private void Update()
     {
+        /*
         if(GameManager.mainGameManager.CurrentGamePhase == GamePhase.TensionPhase)
         {
             TensionPhasePlayerControl();
@@ -48,6 +49,8 @@ public class PlayerControllerScript : MonoBehaviour
         {
             HugPhasePlayerControl();
         }
+        */
+        TensionPhasePlayerControl();
     }
 
     /// <summary>
@@ -70,6 +73,7 @@ public class PlayerControllerScript : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, closestPosition, playerMovementSpeed * Time.deltaTime);
             
         }
+        /*
         else if (Input.GetButtonDown(action1InputName)) // If action button 1 is pressed, perform the action
         {
             Debug.Log("Action 1 performed!");
@@ -82,6 +86,7 @@ public class PlayerControllerScript : MonoBehaviour
         {
             Debug.Log("Action 3 performed!");
         }
+        */
 
     }
 

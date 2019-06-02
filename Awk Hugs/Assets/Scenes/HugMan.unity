@@ -347,7 +347,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -1.029671}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7028,10 +7028,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5576075507325723238, guid: 0bfdfe4c6a04034489208ecadf8744a5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f8ce6fbd692f82642889b634766e00b2, type: 2}
+    - target: {fileID: 4614035769275712216, guid: 0bfdfe4c6a04034489208ecadf8744a5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 755872994, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
       propertyPath: interactionObject
       value: 
       objectReference: {fileID: 2055612325}
+    - target: {fileID: 755872994, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 755872995, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 755872996, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
       propertyPath: leftHandTarget
       value: 
@@ -7052,8 +7070,37 @@ PrefabInstance:
       propertyPath: MaxHugDistance
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 755872996, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bfdfe4c6a04034489208ecadf8744a5, type: 3}
+--- !u!1 &2131300772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5576075507318296592, guid: 0bfdfe4c6a04034489208ecadf8744a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2131300771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2131300773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131300772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b841105457b7d594e9f344fd27527bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opponent: {fileID: 1959007985}
+  playerMovementSpeed: 1
+  furthestPositionOffset: 0.3
+  closestPositionOffset: 0.3
+  action1InputName: 
+  action2InputName: 
+  action3InputName: 
 --- !u!1001 &3421655599768953331
 PrefabInstance:
   m_ObjectHideFlags: 0
