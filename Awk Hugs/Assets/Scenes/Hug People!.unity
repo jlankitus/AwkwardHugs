@@ -1082,6 +1082,7 @@ MonoBehaviour:
   leftHandEffector: 5
   rightHandEffector: 6
   leftShoulderEffector: 1
+  happyHugAudioClips: []
   MaxHugDistance: 5
   foundTarget: 0
   target: {fileID: 0}
@@ -1875,6 +1876,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &319309181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3826104620731165272, guid: ced5e6cc5ea5be84690521c80515c151,
+    type: 3}
+  m_PrefabInstance: {fileID: 5060041536394850999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &319309182
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319309181}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &339626406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,6 +2222,7 @@ MonoBehaviour:
   leftHandEffector: 5
   rightHandEffector: 6
   leftShoulderEffector: 1
+  happyHugAudioClips: []
   MaxHugDistance: 5
   foundTarget: 0
   target: {fileID: 0}
@@ -7817,6 +7921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
         type: 3}
+      propertyPath: happyHugAudioClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
       propertyPath: leftHandTarget
       value: 
       objectReference: {fileID: 2055612325}
@@ -7830,6 +7939,56 @@ PrefabInstance:
       propertyPath: rightHandTarget
       value: 
       objectReference: {fileID: 2080049911}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 64e575b0c35146c479cfd008af42a618, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 162641a17636cb84f9dde47b75aa2ced, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 001650d121cb6a940957f12b7bcb7625, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b8c5c469bcc33a4dbbeb1989f962817, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 187f3080c2c028c48a13abbbde9234c4, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f59e0e998c96a24a98ca3debe235977, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0fb844ad5b6afa448a586f3fd1efa6e9, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a2958d7db836e94381513c36df8e57b, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6bbdf7dcd8e638d4897cd53b28d6f601, type: 3}
+    - target: {fileID: 5060041535062782279, guid: ced5e6cc5ea5be84690521c80515c151,
+        type: 3}
+      propertyPath: happyHugAudioClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: ef0791694a8484142a2cef3a791808ea, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced5e6cc5ea5be84690521c80515c151, type: 3}
 --- !u!4 &8779926344272947045 stripped

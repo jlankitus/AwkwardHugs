@@ -20,6 +20,7 @@ public class HugController : MonoBehaviour
     [SerializeField] FullBodyBipedEffector rightHandEffector;
     [SerializeField] FullBodyBipedEffector leftShoulderEffector;
     // [SerializeField] FullBodyBipedEffector rightShoulderEffector;
+    [SerializeField] AudioClip [] happyHugAudioClips;
 
     public float MaxHugDistance = 5.0f;
 
@@ -45,9 +46,18 @@ public class HugController : MonoBehaviour
             interactionSystem.StartInteraction(rightHandEffector, rightHandTarget, true);
             interactionSystem.StartInteraction(leftShoulderEffector, leftShoulderTarget, true);
             targetHugVictim.sadParticles.SetActive(false);
+            PlayHugClip();
             targetHugVictim.happyParticles.SetActive(true);
             StartCoroutine(KillWithJoy(targetHugVictim));
         }
+    }
+
+    /// <summary>
+    /// Method called to play a happy hug audio clip
+    /// </summary>
+    void PlayHugClip()
+    {
+        GetComponent<AudioSource>().PlayOneShot(happyHugAudioClips[UnityEngine.Random.Range(0, happyHugAudioClips.Length)]);
     }
 
     private IEnumerator KillWithJoy(HugVictim victim)
