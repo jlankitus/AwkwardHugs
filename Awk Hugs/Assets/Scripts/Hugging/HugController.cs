@@ -21,6 +21,7 @@ public class HugController : MonoBehaviour
     [SerializeField] FullBodyBipedEffector leftShoulderEffector;
     // [SerializeField] FullBodyBipedEffector rightShoulderEffector;
     [SerializeField] AudioClip [] happyHugAudioClips;
+    [SerializeField] AudioClip[] sadAudioClip;
 
     public float MaxHugDistance = 5.0f;
 
@@ -108,7 +109,19 @@ public class HugController : MonoBehaviour
         leftHandTarget = targetHugVictim.leftHandTarget;
         rightHandTarget = targetHugVictim.rightHandTarget;
         leftShoulderTarget = targetHugVictim.leftShoulderTarget;
-        targetHugVictim.sadParticles.SetActive(true);
+        
+        if(targetHugVictim.sadParticles.activeInHierarchy == false)
+        {
+            targetHugVictim.sadParticles.SetActive(true);
+            PlaySadClip();
+        }
+        
         Debug.Log("set targets!");
+    }
+
+    void PlaySadClip()
+    {
+        
+        GetComponent<AudioSource>().PlayOneShot(sadAudioClip[UnityEngine.Random.Range(0, sadAudioClip.Length)]);
     }
 }
