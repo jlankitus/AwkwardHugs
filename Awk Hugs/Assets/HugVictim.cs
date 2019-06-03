@@ -8,4 +8,6 @@ public class HugVictim : MonoBehaviour
     public InteractionObject leftHandTarget;
     public InteractionObject leftShoulderTarget;
     public InteractionObject rightHandTarget;
+    public GameObject sadParticles;
+    public GameObject happyParticles;
 }

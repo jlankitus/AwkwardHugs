@@ -28,6 +28,8 @@ public class HugController : MonoBehaviour
     public GameObject target;
     private HugVictim targetHugVictim;
 
+    public float destroyVictimAfterSeconds = 2.0f;
+
     void Awake()
     {
         interactionSystem = GetComponent<InteractionSystem>();
@@ -38,11 +40,20 @@ public class HugController : MonoBehaviour
     public void LeftHug()
     {
         if (foundTarget)
-        {
+        { 
             interactionSystem.StartInteraction(leftHandEffector, leftHandTarget, true);
             interactionSystem.StartInteraction(rightHandEffector, rightHandTarget, true);
             interactionSystem.StartInteraction(leftShoulderEffector, leftShoulderTarget, true);
+            targetHugVictim.sadParticles.SetActive(false);
+            targetHugVictim.happyParticles.SetActive(true);
+            StartCoroutine(KillWithJoy(targetHugVictim));
         }
+    }
+
+    private IEnumerator KillWithJoy(HugVictim victim)
+    {
+        yield return new WaitForSeconds(destroyVictimAfterSeconds);
+        victim.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -87,6 +98,7 @@ public class HugController : MonoBehaviour
         leftHandTarget = targetHugVictim.leftHandTarget;
         rightHandTarget = targetHugVictim.rightHandTarget;
         leftShoulderTarget = targetHugVictim.leftShoulderTarget;
+        targetHugVictim.sadParticles.SetActive(true);
         Debug.Log("set targets!");
     }
 }
