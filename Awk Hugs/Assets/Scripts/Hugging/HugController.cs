@@ -33,6 +33,7 @@ public class HugController : MonoBehaviour
         interactionSystem = GetComponent<InteractionSystem>();
     }
 
+    // THIS IS THE MOFUCKIN HUG
     [ContextMenu("Left Hug")]
     public void LeftHug()
     {
@@ -43,17 +44,6 @@ public class HugController : MonoBehaviour
             interactionSystem.StartInteraction(leftShoulderEffector, leftShoulderTarget, true);
         }
     }
-
-    /*
-    [ContextMenu("Right Hug")]
-    public void RightHug()
-    {
-        interactionSystem.StartInteraction(leftHandEffector, leftHandTarget, true);
-        interactionSystem.StartInteraction(rightHandEffector, leftHandTarget, true);
-        interactionSystem.StartInteraction(leftShoulderEffector, leftHandTarget, true);
-        interactionSystem.StartInteraction(rightShoulderEffector, leftHandTarget, true);
-    }
-    */
 
     private void Update()
     {
