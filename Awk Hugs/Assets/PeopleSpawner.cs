@@ -104,6 +104,8 @@ public class PeopleSpawner : MonoBehaviour
             {
                 // Then position the victim to a random spawnable position, activate the victim game object, and then break out of the loop
                 victimPool[loopIndex].transform.position = RandomSpawnPosition();
+                victimPool[loopIndex].GetComponent<HugVictim>().happyParticles.SetActive(false);
+                victimPool[loopIndex].GetComponent<HugVictim>().sadParticles.SetActive(false);
                 victimPool[loopIndex].SetActive(true);
                 break;
             }
