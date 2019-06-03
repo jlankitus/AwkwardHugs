@@ -21,14 +21,11 @@ public class HugController : MonoBehaviour
     [SerializeField] FullBodyBipedEffector leftShoulderEffector;
     // [SerializeField] FullBodyBipedEffector rightShoulderEffector;
 
-    // Our Hug Target, and the max distance where we allow a hug attempt
-    // TODO: maybe get rid of this and just use the collider
-    public Transform HugTarget;
     public float MaxHugDistance = 5.0f;
 
     // Did we find a target in range?
     public bool foundTarget = false;
-    private GameObject target;
+    public GameObject target;
     private HugVictim targetHugVictim;
 
     void Awake()
@@ -62,14 +59,18 @@ public class HugController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-           if(foundTarget) LeftHug();
+            if (foundTarget)
+            {
+                if(CheckIfInRange())
+                    LeftHug();
+            }
         }
     }
 
     private bool CheckIfInRange()
     {
-        Debug.Log((HugTarget.position - gameObject.transform.position).magnitude);
-        if (Math.Abs((HugTarget.position - gameObject.transform.position).magnitude) <= MaxHugDistance)
+        Debug.Log((target.transform.position - gameObject.transform.position).magnitude);
+        if (Math.Abs((target.transform.position - gameObject.transform.position).magnitude) <= MaxHugDistance)
             return true;
         else return false;
     }
@@ -87,7 +88,6 @@ public class HugController : MonoBehaviour
                 targetHugVictim = target.GetComponent<HugVictim>();
                 SetTargetsToVictim(targetHugVictim);
             }
-        
             Debug.Log("Targeted victim: " + target.name);
         }
     }
