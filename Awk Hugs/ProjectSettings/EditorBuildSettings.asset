@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Main Menu.unity
+    path: Assets/Scenes/Main Menu.unity
     guid: 6de05dbc0223c4d438e42a68ad7c94f1
   - enabled: 1
     path: Assets/Scenes/Hug People!.unity
