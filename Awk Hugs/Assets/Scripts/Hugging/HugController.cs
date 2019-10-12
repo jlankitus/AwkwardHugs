@@ -32,9 +32,9 @@ public class HugController : MonoBehaviour
 
     public float destroyVictimAfterSeconds = 2.0f;
 
-    [SerializeField] public int hugCount = 0;
+    public delegate void HugSuccess();
+    public event HugSuccess OnSuccessfulHug;
     
-
     void Awake()
     {
         interactionSystem = GetComponent<InteractionSystem>();
@@ -53,10 +53,12 @@ public class HugController : MonoBehaviour
             PlayHugClip();
             targetHugVictim.happyParticles.SetActive(true);
             StartCoroutine(KillWithJoy(targetHugVictim));
-            hugCount++;
+            
+            // Call hug successful event
+            OnSuccessfulHug?.Invoke();
         }
     }
-
+    
     /// <summary>
     /// Method called to play a happy hug audio clip
     /// </summary>

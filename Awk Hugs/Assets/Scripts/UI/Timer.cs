@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI gameOver;
     [SerializeField] private float timeLeft;
+    [SerializeField] private AudioSource youFailedSource;
 
     private bool isGameActive = true;
     // Start is called before the first frame update
@@ -32,8 +33,10 @@ public class Timer : MonoBehaviour
 
     private void GameOver()
     {
+        isGameActive = false;
         gameOver.gameObject.SetActive(true);
         timeLeft = 0;
         timerText.text = "You failed you little bitch!";
+        youFailedSource.PlayOneShot(youFailedSource.clip);
     }
 }
