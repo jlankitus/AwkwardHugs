@@ -32,6 +32,9 @@ public class HugController : MonoBehaviour
 
     public float destroyVictimAfterSeconds = 2.0f;
 
+    [SerializeField] public int hugCount = 0;
+    
+
     void Awake()
     {
         interactionSystem = GetComponent<InteractionSystem>();
@@ -50,6 +53,7 @@ public class HugController : MonoBehaviour
             PlayHugClip();
             targetHugVictim.happyParticles.SetActive(true);
             StartCoroutine(KillWithJoy(targetHugVictim));
+            hugCount++;
         }
     }
 
