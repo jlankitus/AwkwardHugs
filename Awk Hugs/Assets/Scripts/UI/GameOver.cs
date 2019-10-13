@@ -40,5 +40,10 @@ namespace UI
             SetLoss();
         }
 
+        public void Reset()
+        {
+            winOrLose.gameObject.SetActive(false);
+        }
+
     }
 }

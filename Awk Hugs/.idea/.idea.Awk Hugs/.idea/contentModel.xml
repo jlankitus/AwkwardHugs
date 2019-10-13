@@ -485,6 +485,7 @@
             </e>
           </e>
         </e>
+        <e p="Restart.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AudioFadeout.cs" t="Include" />
           <e p="CameraScript.cs" t="Include" />
@@ -537,6 +538,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="trigger.cs" t="Include" />
         <e p="Wander.cs" t="Include" />
       </e>
       <e p="Awk Hugs.sln" t="IncludeFlat" />
