@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 6de05dbc0223c4d438e42a68ad7c94f1
   - enabled: 1
+    path: Assets/Scenes/Hug People!.unity
+    guid: bac8b41d583d6604c80aabd24e3c0620
+  - enabled: 1
     path: Assets/Scenes/Hug People!UI.unity
     guid: e08a5a4f36f66cb478b92a9ba0a48a23
   m_configObjects: {}

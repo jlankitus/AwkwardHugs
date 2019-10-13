@@ -5376,6 +5376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab09616efbf89b4bab811d64e09b67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  youFailedSource: {fileID: 1976072634}
   winOrLose: {fileID: 1450512940}
   timer: {fileID: 1976072632}
   displayHug: {fileID: 1976072633}
@@ -7651,8 +7652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 328001572}
   timeLeft: 15
-  youFailedSource: {fileID: 1976072634}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 1224289420}
 --- !u!114 &1976072633
 MonoBehaviour:
   m_ObjectHideFlags: 0
