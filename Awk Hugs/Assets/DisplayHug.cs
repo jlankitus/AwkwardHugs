@@ -8,7 +8,7 @@ public class DisplayHug : MonoBehaviour
 {
     [SerializeField] private HugController _hugController;
     [SerializeField] private TextMeshProUGUI hugCountText;
-    [SerializeField] private int hugCount = 0;
+    [SerializeField] public int hugCount = 0;
 
     private void Start()
     {

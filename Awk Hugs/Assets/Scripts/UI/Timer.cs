@@ -6,11 +6,16 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private TextMeshProUGUI gameOver;
     [SerializeField] private float timeLeft;
     [SerializeField] private AudioSource youFailedSource;
 
+    [SerializeField] private GameOver gameOver;
+
     private bool isGameActive = true;
+    
+    public delegate void GameHasEnded();
+    public event GameHasEnded OnGameEnded;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,7 @@ public class Timer : MonoBehaviour
             if ( timeLeft < 0 )
             {
                 GameOver();
+                OnGameEnded?.Invoke();
             }
         }
     }
