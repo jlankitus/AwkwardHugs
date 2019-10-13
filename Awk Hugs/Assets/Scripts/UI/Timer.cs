@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
+using UI;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float timeLeft;
-    [SerializeField] private AudioSource youFailedSource;
+    
 
     [SerializeField] private GameOver gameOver;
 
@@ -44,6 +45,5 @@ public class Timer : MonoBehaviour
         gameOver.gameObject.SetActive(true);
         timeLeft = 0;
         timerText.text = timeLeft.ToString();
-        youFailedSource.PlayOneShot(youFailedSource.clip);
     }
 }

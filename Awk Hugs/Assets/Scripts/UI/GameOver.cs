@@ -1,31 +1,33 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-public class GameOver : MonoBehaviour
+namespace UI
 {
-    public TextMeshProUGUI winOrLose;
-    public Timer timer;
-    public DisplayHug displayHug;
+    public class GameOver : MonoBehaviour
+    {
+        [SerializeField] private AudioSource youFailedSource;
+        public TextMeshProUGUI winOrLose;
+        public Timer timer;
+        public DisplayHug displayHug;
 
-    private void Start()
-    {
-        timer.OnGameEnded += GameOverDetermination;
-    }
-    
-    public void GameOverDetermination()
-    {
-        if ( displayHug.hugCount >= 15)
+        private void Start()
         {
-            winOrLose.text = "You Win!";
+            timer.OnGameEnded += GameOverDetermination;
         }
-        else if ( displayHug.hugCount < 15)
-        {
-            winOrLose.text = "You Lose";
-        }
-        winOrLose.gameObject.SetActive(true);
-    }
     
+        private void GameOverDetermination()
+        {
+            if ( displayHug.hugCount >= 15)
+            {
+                winOrLose.text = "You Win!";
+            }
+            else if ( displayHug.hugCount < 15)
+            {
+                winOrLose.text = "You Lose";
+                youFailedSource.PlayOneShot(youFailedSource.clip);
+            }
+            winOrLose.gameObject.SetActive(true);
+        }
+    
+    }
 }
