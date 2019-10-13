@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 
@@ -42,7 +43,7 @@ public class Timer : MonoBehaviour
         isGameActive = false;
         gameOver.gameObject.SetActive(true);
         timeLeft = 0;
-        timerText.text = "You failed you little bitch!";
+        timerText.text = timeLeft.ToString();
         youFailedSource.PlayOneShot(youFailedSource.clip);
     }
 }

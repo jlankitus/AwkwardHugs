@@ -21,7 +21,7 @@ public class GameOver : MonoBehaviour
         {
             winOrLose.text = "You Win!";
         }
-        else if ( displayHug.hugCount > 15)
+        else if ( displayHug.hugCount < 15)
         {
             winOrLose.text = "You Lose";
         }
