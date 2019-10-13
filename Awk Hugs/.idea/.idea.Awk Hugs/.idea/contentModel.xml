@@ -25,6 +25,7 @@
           </e>
         </e>
         <e p="DisplayHug.cs" t="Include" />
+        <e p="EnemyScript.cs" t="Include" />
         <e p="Farland Skies" t="Include">
           <e p="!Core" t="Include">
             <e p="Scripts" t="Include">
@@ -484,6 +485,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AudioFadeout.cs" t="Include" />
           <e p="CameraScript.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Hugging" t="Include">
