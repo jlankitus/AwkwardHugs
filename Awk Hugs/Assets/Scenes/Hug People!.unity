@@ -3419,7 +3419,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551144322}
-  m_LocalRotation: {x: 0.23546901, y: 0.12818412, z: -0.031346936, w: 0.9628814}
+  m_LocalRotation: {x: 0.235469, y: 0.12818412, z: -0.031346932, w: 0.9628814}
   m_LocalPosition: {x: -5.543991, y: 4.42, z: -14.703125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4511,7 +4511,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003923285}
-  m_LocalRotation: {x: 0.23546901, y: 0.12818412, z: -0.031346936, w: 0.9628814}
+  m_LocalRotation: {x: 0.235469, y: 0.12818412, z: -0.031346932, w: 0.9628814}
   m_LocalPosition: {x: -5.543991, y: 4.42, z: -14.703125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4614,7 +4614,7 @@ GameObject:
   - component: {fileID: 1006069641}
   - component: {fileID: 1006069640}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
@@ -30,7 +31,7 @@ public class Timer : MonoBehaviour
         if (isGameActive)
         {
             timeLeft -= Time.deltaTime;
-            timerText.text = timeLeft.ToString();
+            timerText.text = Math.Round(timeLeft).ToString();
             if ( timeLeft < 0 )
             {
                 GameOver();
@@ -44,6 +45,6 @@ public class Timer : MonoBehaviour
         isGameActive = false;
         gameOver.gameObject.SetActive(true);
         timeLeft = 0;
-        timerText.text = timeLeft.ToString();
+        timerText.text = Math.Round(timeLeft).ToString();
     }
 }
