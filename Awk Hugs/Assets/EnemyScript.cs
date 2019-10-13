@@ -20,6 +20,8 @@ public class EnemyScript : MonoBehaviour
 
     private bool musicFadeOutEnabled = false;
 
+    public GameObject enemy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,15 @@ public class EnemyScript : MonoBehaviour
                 enemyBoi_AudioSource.volume = newVolume;
 
             }
+        }
+
+        //LEVEL TRANSITION TO GAME OVER SCREEN
+
+        if(distance <= 2.2)
+        {
+            Destroy(bearBoi);
+            Destroy(enemy);
+
         }
 
 
