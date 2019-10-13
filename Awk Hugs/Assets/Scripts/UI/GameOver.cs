@@ -23,11 +23,22 @@ namespace UI
             }
             else if ( displayHug.hugCount < 15)
             {
-                winOrLose.text = "You Lose";
-                youFailedSource.PlayOneShot(youFailedSource.clip);
+                SetLoss();
             }
             winOrLose.gameObject.SetActive(true);
         }
-    
+
+        private void SetLoss()
+        {
+            winOrLose.text = "You Lose";
+            youFailedSource.PlayOneShot(youFailedSource.clip);
+            winOrLose.gameObject.SetActive(true);
+        }
+
+        public void Lose()
+        {
+            SetLoss();
+        }
+
     }
 }

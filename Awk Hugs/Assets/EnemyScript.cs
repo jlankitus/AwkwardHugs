@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UI;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -21,6 +22,7 @@ public class EnemyScript : MonoBehaviour
     private bool musicFadeOutEnabled = false;
 
     public GameObject enemy;
+    public GameOver GameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -84,7 +86,7 @@ public class EnemyScript : MonoBehaviour
         {
             Destroy(bearBoi);
             Destroy(enemy);
-
+            GameOver.Lose();
         }
 
 
